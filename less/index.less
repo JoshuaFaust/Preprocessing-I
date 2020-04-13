@@ -29,8 +29,138 @@ article, aside, details, figcaption, figure,
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+header{
+	display:flex;
+	flex-direction: row-reverse;
+	justify-content:space-between;
+	
+	a{
+		text-decoration:none;
+		padding:3rem;
+		font-size:2rem;
+	}
+
+}
+
 body {
 	line-height: 1;
+	
+
+.section1{
+	padding:5rem;
+	background-color: rgb(240, 190, 204);
+	img{  
+		height: 30rem;
+  		width: 30rem;
+		border-radius: 50%;
+		padding: 2rem 4rem 2rem 4rem;
+	}
+	h1{
+		font-size:5rem;
+		padding:1rem;
+	}
+	h4{
+		font-size:2rem;
+		padding:1rem;
+	}
+	hr{
+		border-top: 2px dashed red;
+		margin: .5rem;
+	}
+	p{
+		font-size:1.5rem;
+		padding:1rem;
+		}
+		button{
+			background-color: gray;
+			border: black;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 1rem .5rem;
+			cursor: pointer;
+			border-radius: 1rem;
+			padding:1rem;
+
+		}
+}
+
+.section2{
+	
+	padding:3rem 5rem 5rem 5rem;
+	.aboutMeParagraph{
+		display:inline-block;
+		max-width: 50%;
+		height: 30rem;
+		line-height:2rem;
+		word-wrap: wrap;
+	}
+	h2{
+		font-size:3.5rem;
+		padding: 0 0 1rem 0;
+	}
+	p{
+		font-size:1.5rem;
+		margin: left;
+		text-align: left;
+		max-width: 60%;
+		padding: 0px 0px 0px 0px;
+		display:inline-block;
+		
+		@media( max-width: 500px ) {
+			margin: left;
+			text-align: center;
+			width:100rem;
+			display:block;
+
+		}
+		
+	}
+	.skills{
+		padding:-1rem 0rem 0 0 ;
+		h3{
+			font-size:3.5rem;
+			padding: 0 0 1rem 0;
+		}
+		ul{
+			display:inline-block;
+			font-size:1.5rem;
+			li{
+				padding:1rem 30rem 1rem 1rem;
+				border: 1px solid hotpink;
+			}
+		}
+	}
+}
+.section3{
+	h3{ 
+		font-size:3.5rem;
+		padding: 0 5rem 0rem 5rem;
+		}
+		dl{
+			padding:2rem 5rem 0rem 5rem;
+		font-size:2rem;
+		dt{
+			
+			font-weight:bold;
+		}
+		dd{
+			padding:3rem;
+		}
+		}
+}
+footer{
+	background-color:grey;
+	h5{
+		font-size:1.5rem;
+		padding:3rem 0 3rem 0;
+		text-align: center
+	}
+}
 }
 ol, ul {
 	list-style: none;
@@ -54,6 +184,11 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%; 
 }
 
+/*variables*/
+
+@media( max-width: 500px ) {
+}
