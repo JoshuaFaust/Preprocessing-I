@@ -24,14 +24,223 @@ time, mark, audio, video {
 	font: inherit;
 	vertical-align: baseline;
 }
+
+
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure, 
 footer, header, hgroup, menu, nav, section {
 	display: block;
 }
+
+
+header{
+	display: flex;
+	flex-direction: row-reverse;
+	justify-content: space-between;
+	flex-direction:column;	
+	nav{
+		@media (max-width: 500px) {
+		display:flex;
+		width: 100%;
+		flex-direction:column;
+		align-content: center;
+		align-items:center;
+	  }
+	  a {
+		text-decoration: none;
+		padding: 3rem;
+		font-size: 2rem;
+		@media (max-width: 500px) {
+		padding:1rem;
+		}
+
+
+  }
+	}
+
+	
+}
+
+
 body {
 	line-height: 1;
+
+	.section1 {
+		padding: 5rem;
+		background-color: @bgpink;
+	
+		img {
+			height: 30rem;
+			width: 30rem;
+			border-radius: 50%;
+			padding: 2rem 4rem 2rem 4rem;
+		  }
+		h1 {
+			font-size: 5rem;
+			padding: 1rem;
+		}
+		h4 {
+			font-size: 2rem;
+			padding: 1rem;
+		}
+		.section1 hr {
+			border-top: 2px dashed red;
+			margin: 0.5rem;
+		}
+		p {
+			font-size: 1.5rem;
+			padding: 1rem;
+		}
+		button {
+			background-color: grey;
+			border: black;
+			color: white;
+			padding: 20px;
+			text-align: center;
+			text-decoration: none;
+			display: inline-block;
+			font-size: 16px;
+			margin: 1rem 0.5rem;
+			cursor: pointer;
+			border-radius: 1rem;
+			padding: 1rem;
+			@media (max-width: 500px) {
+				display:flex;
+				align-content: center;
+				justify-content:center;
+				align-items:center;
+				width: 100%;
+				
+			}
+		
+		  }
+	  }
+	  .section2 {
+		/*padding: 3rem 5rem 5rem 5rem;*/
+		display:flex;
+		padding:5rem;
+		@media (max-width: 500px) {
+			display:flex;
+			flex-direction:column;
+			width: 300%;
+			height:20rem;
+		
+			
+		}
+	
+		.aboutMeParagraph {
+			.line-width();
+			word-wrap: wrap;
+		
+		  }
+		h2 {
+			
+			.font-pad();
+		}
+		p {
+			font-size: 1.5rem;
+			margin: left;
+			text-align: left;
+			max-width: 60%;
+			padding: 0px 0px 0px 0px;
+			display: inline-block;
+		}
+		.skills {
+			.line-width();
+			@media (max-width:500px){
+				padding: 3rem 0 0 0;
+			}
+			
+			h3 {
+				.font-pad();
+			  }
+			ul {
+				display: inline-block;
+				font-size: 1.5rem;
+				li {
+					padding: 1rem 30rem 1rem 1rem;
+					border: 1px solid @brdrpink;
+					@media (max-width: 500px) {
+					padding:1rem 15rem 1rem 1rem;
+					}
+				  }
+			  }  
+		}  
+	  }
+	  /*.section3 {
+		display:flex;
+		flex-direction:column;
+		padding:5rem;
+		.exp {
+			width:45%;
+			h3 {
+				font-size: 3.5rem;
+				padding: 0 0 1rem 0;
+			  }
+			ul {
+				display: inline-block;
+				font-size: 1.5rem;
+				li {
+					padding: 1rem 30rem 1rem 1rem;
+					border: 1px solid hotpink;
+				  }
+			  }  
+		} 
+	  }*/
+	  .section3{
+		width:45%;
+		
+		@media (max-width: 500px) {
+			display:flex;
+			position:relative;
+			top: 55rem;
+			flex-direction:column;
+			width: 90%;
+			height:2rem;
+		}
+		  .worhis {
+		font-size: 3.5rem;
+		padding: 0 5rem 0rem 5rem;	
+		}
+		
+	
+		dl {
+		padding: 2rem 5rem 0rem 5rem;
+		font-size: 2rem;
+		@media (max-width: 500px) {
+			font-size: 1.6rem;
+		}
+		
+		dt {
+			font-weight: bold;
+		}
+			dd {
+				padding: 3rem;
+			  }
+	  }
+	  
+	}
+
 }
+
+
+
+	footer {
+		background-color: @bggrey;
+		@media (max-width: 500px) {
+		display:flex;
+		flex-direction:column;
+		position:relative;
+		top: 90rem;	
+		}
+		h5 {
+			font-size: 1.5rem;
+			padding: 3rem 0 3rem 0;
+			text-align: center;
+		  }
+	  }  
+
+
 ol, ul {
 	list-style: none;
 }
@@ -54,6 +263,26 @@ table {
 }
 
 html, body {
-    height: 100%;
+	height: 100%;
+	font-size: 62.5%;
+}
+
+
+/*Variables*/
+@bgpink: #f0becc;
+@bggrey: grey;
+@brdrpink: hotpink;
+
+
+/*Mixins*/
+
+.font-pad{
+	font-size: 3.5rem;
+	padding: 0 0 2rem 0;
+}
+
+.line-width{
+	line-height: 2rem;
+	width:45%;
 }
 
